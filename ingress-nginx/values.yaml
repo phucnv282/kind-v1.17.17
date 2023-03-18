@@ -1,0 +1,27 @@
+controller:
+  config:
+    # enable-modsecurity: "true"
+    # enable-owasp-modsecurity-crs: "true"
+    # modsecurity-snippet: |-
+    #   SecRuleEngine On
+    #
+    #   SecAuditEngine RelevantOnly
+    #   SecAuditLogRelevantStatus "^(?:5|4(?!04))"
+    #   SecAuditLogParts ABIJDEFHZ
+    #   SecAuditLogType Serial
+    #   SecAuditLog /dev/stdout
+    #   SecAuditLogFormat JSON
+    #
+    #   SecRule REMOTE_ADDR "@ipMatch 127.0.0.1" "id:100000,phase:1,pass,nolog,ctl:ruleEngine=Off"
+
+  service:
+    type: NodePort
+
+    nodePorts:
+      http: 32080
+      https: 32443
+
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true

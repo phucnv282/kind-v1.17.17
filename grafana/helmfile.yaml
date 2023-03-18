@@ -1,0 +1,7 @@
+releases:
+  - name: grafana
+    chart: grafana/grafana
+    version: 6.44.9
+    namespace: grafana
+    values:
+      - values.yaml

@@ -1,0 +1,7 @@
+releases:
+  - name: kube-prometheus-stack
+    chart: prometheus-community/kube-prometheus-stack
+    version: 42.1.0
+    namespace: kube-prometheus-stack
+    values:
+      - values.yaml

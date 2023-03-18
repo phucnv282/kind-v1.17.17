@@ -1,0 +1,7 @@
+releases:
+  - name: jaeger
+    chart: jaegertracing/jaeger
+    version: 0.65.3
+    namespace: jaeger
+    # values:
+    #   - values.yaml

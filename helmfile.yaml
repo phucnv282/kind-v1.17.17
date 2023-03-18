@@ -1,0 +1,19 @@
+repositories:
+  - name: ingress-nginx
+    url: https://kubernetes.github.io/ingress-nginx
+  - name: prometheus-community
+    url: https://prometheus-community.github.io/helm-charts
+  - name: grafana
+    url: https://grafana.github.io/helm-charts
+  - name: stakater
+    url: https://stakater.github.io/stakater-charts
+  - name: jaegertracing
+    url: https://jaegertracing.github.io/helm-charts
+
+helmfiles:
+  - path: ingress-nginx/helmfile.yaml
+  - path: kube-prometheus-stack/helmfile.yaml
+  - path: grafana/helmfile.yaml
+  - path: loki-stack/helmfile.yaml
+  - path: reloader/helmfile.yaml
+  - path: jaeger/helmfile.yaml

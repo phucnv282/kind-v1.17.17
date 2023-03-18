@@ -1,0 +1,5 @@
+releases:
+  - name: reloader
+    chart: stakater/reloader
+    version: 0.0.124
+    namespace: reloader
